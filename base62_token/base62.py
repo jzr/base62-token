@@ -33,6 +33,7 @@ def decode(s: str, alphabet=alphabet):
 
     return (b"\x00" * leading_zeroes) + num.to_bytes((num.bit_length() + 7) // 8, "big")
 
+
 def encode_int(num: int, alphabet=alphabet):
     arr = []
     base = len(alphabet)

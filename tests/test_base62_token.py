@@ -28,11 +28,11 @@ def test_token():
 
     assert is_valid("jzr_LH8WenA1DH7JtM1ShLEVv0fXu1Apqg3tVSPWMIbPcltwZPI2DL1vo0_BVmfh")
 
+
 def test_gh():
-    # The scanners are going to go crazy over this. 
-    token = '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'
+    # The scanners are going to go crazy over this.
+    token = "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"
     assert is_valid_gh(token)
 
-    token = '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'
+    token = "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"
     assert is_valid_gh(token)
-

@@ -65,9 +65,8 @@ def is_valid_gh(token: str) -> bool:
     secret, crc = tail[:-6], tail[-6:]
 
     try:
-        return (
-            prefix in ghp_prefixes
-            and crc32(secret.encode()) == int.from_bytes(base62.decode(crc), "big")
+        return prefix in ghp_prefixes and crc32(secret.encode()) == int.from_bytes(
+            base62.decode(crc), "big"
         )
     except Exception:
         return False
